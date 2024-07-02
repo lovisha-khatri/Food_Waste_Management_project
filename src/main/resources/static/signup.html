@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="signbox">
+        <h4 class="signup">Sign Up</h4>
+        <form class="container-1" id="signupForm" action="./register" method="post">
+            <div class="box">
+                <input type="text" class="box-3" id="fname" placeholder="First Name" name="fname" required>
+            </div>
+            <div class="box">
+                <input type="text" class="box-1" id="lname" placeholder="Last Name" name="lname" required>
+            </div>
+            <div class="box">
+                <input type="email" class="box-1" id="email" placeholder="Email" name="email" required>
+            </div>
+            <div class="box">
+                <input type="password" class="box-1" id="password" placeholder="Password" name="password" required>
+            </div>
+  
+            <div class="box">
+                <input type="text" class="box-3" id="food" placeholder="Enter Your Favourite Food " required>
+            </div>
+			<div class="mb-3 form-check">
+			    <input type="radio" name="user" value="user"> User
+			    <br>
+			    <input type="radio" name="user" value="ngo"> NGO
+			</div>
+            <div class="form-group form-check">
+                <p class="mt-3">Already a member? <a href="signin.html" class="btn btn-link">Sign In</a></p>
+            </div>
+            <button type="submit" class="box-2">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("signupForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+            submitForm();
+        });
+      
+        function submitForm() {
+            var radiodata = document.querySelector('input[name="user"]:checked').value;
+//            localStorage.setItem("radiobut", radiodata);
+//            var form = document.getElementsByName("signupForm");
+//            var food1=document.getElementById("food").value;
+//            localStorage.setItem("lastname", food1);
+//            var formData = new FormData(form);
+            var jsonObject = {};
+            
+            jsonObject["email"] = document.getElementById("email").value;
+            jsonObject["fname"] = document.getElementById("fname").value;
+            jsonObject["lname"] = document.getElementById("lname").value;
+            jsonObject["password"] = document.getElementById("password").value;
+            jsonObject["food"] = document.getElementById("food").value;
+            jsonObject["radio"] = document.querySelector('input[name="user"]:checked').value;
+
+            var jsonData = JSON.stringify(jsonObject);
+            var xhr = new XMLHttpRequest();
+            xhr.open("post", "./register");
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.send(jsonData);
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    console.log("Registration successful");
+                    if(radiodata=="user")
+                    	{
+                    	 window.location.href = "user.html";
+                    	}
+                    else if(radiodata=="ngo")
+                    	{
+                    	window.location.href= "Ngopage.html";
+                    	}
+                   
+                } else {
+                    console.error("Registration failed");
+                }
+            };
+        }
+    </script>
+</body>
+</html>

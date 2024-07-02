@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body >
+    <div class="login-box">
+        <h4 class="login">Sign In</h4>
+        <form class="container-1" id="loginForm">
+            <div class="box">
+                <i class="fa-solid fa-user icon"></i>
+                <input class="box-1" type="text" placeholder="user name" id="email" name="email" value="" required>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-lock icon"></i>
+                <input class="box-1" type="password" placeholder="password" id="password" name="password" value="" required>
+            </div>
+            <div class="button">
+                <button class="box-2" type="submit">Login</button>
+            </div>
+            <div class ="container" style= "text-decoration : none" >
+            <a href ="forget.html">Forget Password??</a>
+            </div>
+            
+            
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var rdata=localStorage.getItem("radiobut");
+
+               var xhr = new XMLHttpRequest();
+               var data = {
+            	        email: email,
+            	        password: password
+            	    };
+                xhr.open("POST","./login");
+                xhr.setRequestHeader("Content-Type", "application/json");
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === XMLHttpRequest.DONE) {
+                        if (xhr.status === 200) {
+                            var response = xhr.responseText;
+                            if (response === "user") {
+                                window.location.href = "user.html";
+                            } else if (response === "ngo") {
+                                window.location.href = "Ngopage.html";
+                            } else {
+                                // Handle other cases or display an error message
+                                console.error("Login failed: " + response);
+                            }
+                        } else {
+                            // Handle HTTP errors
+                            console.error("HTTP error: " + xhr.status);
+                        }
+                    }
+                };
+
+                xhr.send(JSON.stringify(data));
+  
+        });
+        
+
+    </script>
+</body>
+
+</html>

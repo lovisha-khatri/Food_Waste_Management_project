@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResetPage</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="resetbox">
+        <h4 class="reset">Reset Password</h4>
+        <form class="container-1" id="resetupForm" action="./updatePassword" method="post">
+        <div id="pass1" class="pass">
+            <input type="password" id="password12" name="password12" placeholder="Password" required>
+            </div>
+            <div id ="confirm_pass1" class ="pass">
+            <input type="password" id="password123" name="password123" placeholder="Confirm Password" required  onkeyup = "validate_password()">
+        </div>
+        <span id="wrong_pass_alert"></span>
+        <div class="buttons">
+            <button id="create"  class="submit_btn" type="submit"  onkeyup="wrong_pass_alert()"> Submit </button>
+        </div>
+        
+         </form>
+    </div>
+   <script src="index1.js"></script> 
+</body>
+<script>
+document.getElementById("resetupForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+     var password=document.getElementById("password123").value;
+     var email=localStorage.getItem("lastname1");
+     // var email="sandeepchauhan12334@gamil.com";
+    console.log("Email" ,email);
+    console.log("Password: " + password);
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "./updatePassword", true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                var responseText = xhr.responseText;
+                console.log("Response text:", responseText);// Log the response text
+                // Handle the response based on its format
+                window.location.href = "signin.html";
+            } else {
+            	 console.log("Response text:", responseText);
+            }
+        }
+    };
+    xhr.send(JSON.stringify({ email, password }));
+
+});
+
+</script>
+</html>

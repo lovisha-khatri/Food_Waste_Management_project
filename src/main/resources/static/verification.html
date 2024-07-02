@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+
+    <title>Verification</title>
+</head>
+
+<body>
+    <div class="verifybox">
+        <h2 class="signup">OTP Verification Code</h2>
+        <p class="verify">One Time Password has been sent to you.</p>
+        <p class="verify">Enter the OTP below to verify it.</p>
+        <br>
+        <div id="inputs" class="inputs">
+            <input class="input" type="text" inputmode="numeric" maxlength="1" onkeyup="nextInput(event, this)"/>
+            <input class="input" type="text" inputmode="numeric" maxlength="1"onkeyup="nextInput(event, this)"/>
+            <input class="input" type="text" inputmode="numeric" maxlength="1"onkeyup="nextInput(event, this)"/>
+            <input class="input" type="text" inputmode="numeric" maxlength="1"onkeyup="nextInput(event, this)"/>
+            <input class="input" type="text" inputmode="numeric" maxlength="1"onkeyup="nextInput(event, this)"/>
+            <input class="input" type="text" inputmode="numeric" maxlength="1"onkeyup="nextInput(event, this)"/>
+        </div>
+        <div>
+            <button type="submit" onclick="submitOTP()" class="box-6">Submit</button>
+        </div>
+         </div>
+        <script type="text/javascript">
+        function submitOTP() {
+            // Retrieve the OTP entered by the user
+            console.log("hello 1 java");
+            var dat = localStorage.getItem("lastname12134");
+            alert(dat);
+            var inputs = document.getElementsByClassName('input');
+            var otp = '';
+
+            for (var i = 0; i < inputs.length; i++) {
+                otp += inputs[i].value;
+            }
+
+            console.log("OTP: ", otp);
+            console.log("oldotp: ", dat);
+
+            var xhr = new XMLHttpRequest();
+            console.log("===>1");
+            xhr.open("POST", "./verify-otp");
+            console.log("===>2")
+            xhr.setRequestHeader("Content-Type", "application/json");
+            console.log("===>3")
+
+            xhr.onload = function () {
+                console.log("===>4")
+                if (xhr.status === 200) {
+                    console.log("===>5")
+                    console.log("OTP verified successfully. Redirecting to signin page...");
+                    console.log("===>6")
+                    if (otp == dat) {
+                        console.log("===>7")
+                        console.log("Entered in the conditions");
+                        window.location.href = "reset.html";
+                    } else {
+                        console.log("Otp not matched")
+                    }
+                } else {
+                    console.error("Failed to verify OTP. Status code:", xhr.status);
+                    // Handle other HTTP status codes as needed
+                }
+            };
+
+            xhr.send(JSON.stringify({ otp: otp }));
+        }
+ 
+
+    
+    </script>
+    <script src="index.js"></script>
+</body>
+
+</html>

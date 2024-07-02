@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="securitybox">
+        <h4 class="signup"> Security Check</h4>
+        <form class="container-1">
+            <div class="box">
+                <input type="text" class="box-3" placeholder="Enter Your Favourite Food" id="secfood">
+            </div>
+        </form>
+        <button type="submit" class="box-7" onclick="getdata()">Submit</button>
+
+</body>
+<script>
+function getdata()
+{
+	 // Retrieve
+    var ftda=localStorage.getItem("lastname");
+	 console.log("helo 0");
+	 var securityfood= document.getElementById("secfood").value;
+	 if(ftda==securityfood)
+	{ 
+		/*  console.log("helo 1");
+		 var xhr = new XMLHttpRequest();
+		 console.log("helo 2");
+		 xhr.open("POST", "./generate-otp");
+		 console.log("helo 3");
+		 xhr.setRequestHeader("Content-Type", "application/json");
+		 console.log("helo 4");
+		 xhr.onload = function() {
+		     if (xhr.status === 200) {
+		    	 console.log("helo 5");
+		         console.log("OTP Generated successfully");
+		         console.log("helo 6");
+		     } else {
+		         console.error("Failed to generate OTP. Status code:", xhr.status);
+		         console.log("helo 7");
+		     }
+		 };
+
+		 xhr.onerror = function() {
+			 console.log("helo 8");
+		     console.error("Error occurred while sending request.");
+		 };
+		 console.log("helo 9");
+    */
+	  	window.location.href="verification.html"; 
+    }
+	 else
+	{
+		 alert("Not Same");
+	}
+    
+}
+</script>
+
+</html>

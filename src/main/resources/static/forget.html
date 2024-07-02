@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgotpage</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+    <div class="forgotbox">
+        <h4 class="reset" >Forgot Password</h4>
+        <form class="container-1" id="forgotForm">
+            <div class="box">
+                <input class="box-1" type="email" id="email" placeholder="Enter your email id" name="email">
+            </div>
+             <div class="box">
+                <input type="text" class="box-3" placeholder="Enter Your Favourite Food" id="secfood" hidden>
+            </div>
+            <div class="button">
+            <button class="box-5" type="button" onClick="showSecQes()">Submit</button>
+                <button class="box-5" type="submit" hidden>Submit</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+ <script>
+ 
+ 
+ function showSecQes() {
+     // Get references to the email and favorite food input fields
+     const emailInput = document.getElementById('email');
+     const secFoodInput = document.getElementById('secfood');
+
+     // Toggle the visibility of the input fields
+     emailInput.hidden = !emailInput.hidden;
+     secFoodInput.hidden = !secFoodInput.hidden;
+
+     // Toggle the visibility of the buttons
+     const submitButton = document.querySelector('button[type="submit"]');
+     const showSecQesButton = document.querySelector('button[onClick="showSecQes()"]');
+     submitButton.hidden = !submitButton.hidden;
+     showSecQesButton.hidden = !showSecQesButton.hidden;
+ }
+ document.getElementById("forgotForm").addEventListener("submit", function(event) {
+	    event.preventDefault();
+	    var email = document.getElementById("email").value;
+	    localStorage.setItem("lastname1", email);
+	    var food = document.getElementById("secfood").value;
+	    console.log("Email: " + email);
+	    console.log("food :" + food);
+
+	    // First API call
+	    var xhr = new XMLHttpRequest();
+	    xhr.open("POST", "./security", true);
+	    xhr.setRequestHeader("Content-Type", "application/json");
+	    xhr.onreadystatechange = function() {
+	        if (xhr.readyState === 4 ) {
+	            if (xhr.status === 200) {
+	                try {
+	                    var response = JSON.parse(xhr.responseText);
+	                    // Proceed with handling the response
+	                    if (response == true) {
+
+	                    } else {
+	                        console.log("Entered food is not correct");
+	                    }
+
+	                    // Second API call
+	                    var xhr2 = new XMLHttpRequest();
+	                    xhr2.open("POST", "./generate-otp", true);
+	                   xhr2.setRequestHeader("Content-Type", "application/json") ;
+	                    xhr2.onreadystatechange = function() {
+	                        if (xhr2.readyState === 4 ) {
+	                        	
+	                            if (xhr2.status === 200) {
+	                                var response2 = JSON.parse(xhr2.responseText);
+	                                localStorage.setItem("lastname12134",response2 );
+	                                window.location.href = "verification.html";
+	                               
+	                               console.log("jksahdkj",dat);
+
+	                                console.log("Response from second API:", response2);
+	                            } else {
+	                                console.error("Error fetching data from second API");
+	                            }
+	                        }
+	                    };
+	                    xhr2.send(JSON.stringify({email}));
+	                } catch (error) {
+	                    console.error("Error parsing JSON:", error);
+	                }
+	            } else {
+	                document.getElementById("error-message").innerText = "An error occurred.";
+	            }
+	        }
+	    };
+	    xhr.send(JSON.stringify({email, food}));
+	});
+
+
+    </script>
+
+</html>

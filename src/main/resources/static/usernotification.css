@@ -1,0 +1,106 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+.container
+{
+    display: flex;
+    justify-content: center;
+    background-color: antiquewhite;
+    width: 100%;
+    height: 935px;
+}
+.notificationcontainer
+{
+  background-color: aliceblue; 
+  width: 600px;
+  margin: 2rem;
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    margin-left: 196px;
+    margin-top: 15px;
+}
+.notificationheader
+{
+    display: flex;
+    align-items: center;
+
+}
+#num-of-notif
+{
+    background-color:aquamarine;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    width: 30px;
+    height: 30px;
+    border-radius: 0.5rem;
+    margin-left: 405px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap:1rem ;
+}
+.notificationcard
+{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+
+}
+.notificationcard .fa-solid
+{
+width: 70px;
+}
+.fa-solid
+{
+    font-weight: 900;
+}
+
+.fa-circle-check
+{
+    margin-left: 10px;
+}
+.fa-circle-xmark
+{
+    margin-right: -42px;
+}
+.icon {
+    font-size: 20px;
+    margin: 0;
+  }
+  .icon1 {
+    font-size: 20px;
+    margin: -14px;
+  }
+.notificationcard .description
+{
+    margin-left: -27px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+.notificationcard.checked {
+    background-color: lightblue;
+}
+
+.unread
+{
+    background-color: rgb(251,201,210);
+}

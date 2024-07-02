@@ -1,0 +1,157 @@
+*
+{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body
+{
+    overflow-x: hidden;
+}
+.navbar-brand
+{
+    font-size: 2rem;
+    color: black;
+    font-family: 'Dancing Script', cursive;
+}
+
+.navbar-brand:hover
+{
+    color: black;
+}
+
+.nav-link
+{
+    margin-left: 10px;
+    margin-right: 10px;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Old Standard TT', serif;
+}
+
+.nav-link:hover
+{
+    color: black;
+}
+
+.search
+{
+    height: 40px;
+    width: 80%;
+    border-radius: 10px;
+    outline: none;
+    margin-right: -40px;
+    border: 2px solid black;
+    font-family: 'Old Standard TT', serif;
+}
+
+.btn0
+{
+    height: 40px;
+    width: 40%;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background: black;
+    color: white;
+    font-weight:700;
+    font-family: 'Old Standard TT', serif;
+}
+
+.btn1
+{
+    height: 20px;
+    width: 20%;
+    margin: 2px;
+    padding-bottom: 26px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    background: black;
+    color: white;
+    font-weight:300;
+}
+
+.main
+{
+    background: url(image/fooood2.jpg)no-repeat;
+    background-size: cover;
+    height: 80vh;
+    background-position: 50% 50%;
+    width: 100%;
+    color: black;
+    /* background-color: rgba(255, 255, 255, 0.7); */
+    opacity: 80%;
+}
+
+.main h1
+{
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.carousel
+{
+    margin: 40px;
+}
+
+.container13
+{
+    background-color: #c6c3c3;
+}
+
+.container14
+{
+    background-color: #161515;
+    color: white;
+}
+
+.footer
+{
+    background-color: black;
+    color: white;
+}
+
+.btn2
+{
+    height: 45px;
+    width: 100px;
+    background: white;
+    margin-left: -102px;
+    border: 2px solid white;
+    font-weight: 600;
+}
+
+.footer input
+{
+    height: 45px;
+    width: 55%;
+    border: 2px solid white;
+    outline: none;
+    background: black ;
+    color: white;
+    margin-top: 20px;
+}
+
+.footer::placeholder
+{
+    color: white;
+}
+
+.footer p
+{
+    margin: 0;
+}
+
+.about
+{
+    text-decoration: none;
+    color: white;
+}
+
+.fab
+{
+    font-size: 1.5rem;
+}
+
+ 

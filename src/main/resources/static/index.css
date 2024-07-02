@@ -1,0 +1,490 @@
+body
+ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('image/bgimage.jpeg')no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.container-1
+ {
+    max-width: 400px;
+    margin: auto;
+}
+
+.box
+ {
+    width: 100%;
+    margin-bottom: 10px;
+
+}
+
+/* SIGN IN BOX CSS */
+
+.login-box 
+{
+    border: 2px solid rgba(89, 103, 118, 0.5);
+    
+    border-radius: 5px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgb(0 0 0 .5);
+    /* background-color: rgb(226 231 243); */
+    background: transparent;
+    margin: 70px auto;
+    width: 600px;
+    height: 400px;
+}
+
+.login
+ {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+}
+
+.box-2 
+{
+    width: 100%;
+    padding: 5px;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 3px;
+    border-radius: 10px;
+}
+
+.box-2:hover 
+{
+    color: white;
+    background: #1e1e1e;
+}
+
+.box i 
+{
+    position: absolute;
+
+}
+
+.icon
+ {
+    padding: 10px;
+    min-width: 40px;
+    margin-right: 10px;
+
+}
+
+.button 
+{
+    width: 440px;
+    padding-top: 10px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+
+.box-1 
+{
+    width: 100%;
+    padding: 10px;
+    padding-left: 30px;
+    text-align: left;
+    margin-bottom: 3px;
+
+}
+.valid {
+    color: green;
+  }
+  
+  .valid:before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+  }
+  
+  /* Add a red text color and an "x" when the requirements are wrong */
+  .invalid {
+    color: red;
+  }
+  
+  .invalid:before
+   {
+    position: relative;
+    left: -35px;
+    content: "✖";
+  }
+  .container {
+    text-decoration: none;
+    float:left;
+    
+
+}
+/* SIGN UP BOX CSS  */
+
+.valid {
+    color: green;
+  }
+  
+  .valid:before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+  }
+  
+  /* Add a red text color and an "x" when the requirements are wrong */
+  .invalid {
+    color: red;
+  }
+  
+  .invalid:before
+   {
+    position: relative;
+    left: -35px;
+    content: "✖";
+  }
+
+.signbox 
+{
+    border: 2px solid black;
+    border: 2px solid rgba(89, 103, 118, 0.5);
+    border-radius: 5px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgb(0 0 0 .5);
+    /* background-color: rgb(226 231 243); */
+
+    background: transparent;
+    margin: 70px auto;
+    width: 600px;
+    height: 590px;
+    padding-left: 19px;
+    padding-right: 19px
+}
+
+.signup 
+{
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.box-3 
+{
+    width: 100%;
+    padding: 10px;
+    padding-left: 30px;
+    text-align: left;
+    margin-bottom: 3px;
+}
+
+/* RESET PAGE CSS */
+
+.resetbox 
+{
+    /* border: 2px solid black;
+    border: 2px solid black; */
+    border: 2px solid rgba(89, 103, 118, 0.5);
+    border-radius: 5px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgb(0 0 0 .5);
+    /* background-color: rgb(226 231 243); */
+    margin: 70px auto;
+    width: 600px;
+    height: 440px;
+    padding-left: 19px;
+    padding-right: 19px;
+}
+
+.reset 
+{
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    padding: 55px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.box-4 
+{
+    width: 100%;
+    padding: 5px;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 3px;
+    border-radius: 10px;
+}
+
+.box-4:hover
+ {
+    color: white;
+    background: #1e1e1e;
+}
+
+/* FORGET PAGE CSS */
+
+.forgotbox
+ {
+    border: 2px solid rgba(89, 103, 118, 0.5);
+    border-radius: 5px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgb(0 0 0 .5);
+    /* border: 2px solid black; */
+    /* background-color: rgb(226 231 243); */
+    margin: 97px auto;
+    width: 600px;
+    height: 384px;
+    padding-left: 19px;
+    padding-right: 19px;
+}
+
+.box-5
+ {
+    width: 100%;
+    padding: 5px;
+    margin-top: 55px;
+    text-align: center;
+    margin-bottom: 3px;
+    border-radius: 10px;
+}
+
+.box-5:hover
+ {
+    color: white;
+    background: #1e1e1e;
+}
+
+.login-box1 {
+    border: 2px solid rgba(89, 103, 118, 0.5);
+    border-radius: 5px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgb(0 0 0 .5);
+    background: transparent;
+    margin: 70px auto;
+    width: 600px;
+    height: 450px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.login-1 {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    padding: 10px
+}
+
+
+
+
+/* Verification page css */
+#otp
+{
+	align-items:centre;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+}
+
+.inputs {
+    text-align: center;
+}
+
+.input {
+    width: 40px;
+    border: none;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.5);
+    margin: 0 10px;
+    text-align: center;
+    font-size: 36px;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.input:focus {
+    border-bottom: 3px solid orange;
+    outline: none;
+}
+
+.input:nth-child(1) {
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.verifybox {
+    border: 2px solid black;
+    border: 2px solid rgba(89, 103, 118, 0.5);
+    border-radius: 5px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgb(0 0 0 .5);
+    /* background-color: rgb(226 231 243); */
+
+    background: transparent;
+    margin: 70px auto;
+    width: 600px;
+    height: 400px;
+    padding-left: 19px;
+    padding-right: 19px
+}
+
+.verify {
+    text-align: center;
+    font-size: 20px;
+}
+.otp1 {
+    text-align: center;
+    font-size: 20px;
+    color: #005874;
+    }
+
+.box-6 {
+    width: 419px;
+    padding: 5px;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 3px;
+    border-radius: 10px;
+    margin-left: 88px;
+}
+
+.box-6:hover {
+    color: white;
+    background: #1e1e1e;
+}
+
+/* Security page CSS */
+.securitybox {
+    border: 2px solid black;
+    border: 2px solid rgba(89, 103, 118, 0.5);
+    border-radius: 5px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgb(0 0 0 .5);
+    /* background-color: rgb(226 231 243); */
+
+    background: transparent;
+    margin: 70px auto;
+    width: 600px;
+    height: 390px;
+    padding-left: 19px;
+    padding-right: 19px
+}
+
+.box-7 {
+    width: 445px;
+    padding: 5px;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 3px;
+    border-radius: 10px;
+    margin-left: 99px;
+}
+
+.box-7:hover {
+    color: white;
+    background: #1e1e1e;
+}
+
+
+/* Reset page  */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(50, 57, 78);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(34, 34, 34);
+    height: 400px;
+    width: 300px;
+    margin-top: 15%;
+    border-radius: 10px;
+    box-shadow: 2px 4px 6px rgb(0, 0, 0);
+}
+
+.pass {
+    display: flex;
+    flex-direction: column;
+    width: 419px;
+    padding: 5px;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 3px;
+    border-radius: 10px;
+    margin-left: 6px;
+}
+
+.image h2 {
+    color: rgb(2, 149, 27);
+    font-size: 30px;
+    font-family: sans-serif;
+    margin-bottom: 50px;
+}
+
+.username input,
+.pass input {
+    font-family: sans-serif;
+    margin-bottom: 20px;
+    height: 30px;
+    border-radius: 100px;
+    border: none;
+    text-align: center;
+    outline: none;
+}
+
+.submit_btn {
+    height: 30px;
+    width: 80px;
+    border-radius: 100px;
+    border: none;
+    outline: none;
+    background-color: rgb(0, 179, 95);
+    margin-top: 15px;
+    margin-left: 163px;
+}
+
+.submit_btn:hover {
+    background-color: rgba(0, 179, 95, 0.596);
+    color: rgb(14, 14, 14);
+    cursor: pointer;
+}
+
+.reset {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    padding: 55px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.resetbox {
+    border: 2px solid black;
+    border: 2px solid black;
+    border: 2px solid rgba(89, 103, 118, 0.5);
+    border-radius: 5px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgb(0 0 0 .5);
+    /* background-color: rgb(226 231 243); */
+    margin: 70px auto;
+    width: 600px;
+    height: 377px;
+    padding-left: 19px;
+    padding-right: 19px;
+}
+

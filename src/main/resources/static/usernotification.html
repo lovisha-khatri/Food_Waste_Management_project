@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> User Notifications</title>
+    <link rel="stylesheet" href="usernotification.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="notificationcontainer" >
+            <header>
+                <h1>Notifications</h1>
+            </header>
+            <div class="notificationheader">
+                <h3>Recents</h3>
+                <span id="num-of-notif"></span>
+            </div>
+            <br>
+            <main id="notifications">
+                <div class="notificationcard unread" id="notification1" onclick="toggleRandomAcceptance('notification1')" >
+                   <span class="icon"> <i class="fa-solid fa-user icon"></i></span>
+                   <span class="description">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis, at!</p>
+                        <p id="notif-time">1m ago</p>
+                    </span>
+                       <!-- <span class="icon1"> <i class="fa-solid fa-circle-check" onclick="toggleChecked(event)"></i></span> -->
+                        <!-- <span class="icon1"> <i class="fa-solid fa-circle-xmark" onclick="hideNotification('notification1')"></i></span> -->
+                </div>
+
+                <div class="notificationcard unread" id="notification2"onclick="toggleRandomAcceptance('notification2')">
+                    <span class="icon"> <i class="fa-solid fa-user icon"></i></span>
+                   <span class="description">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis, at!</p>
+                        <p id="notif-time">1m ago</p>
+                     </span>
+                      <!-- <span class="icon1"> <i class="fa-solid fa-circle-check"  onclick="toggleRandomAcceptance('notification1')"></i>
+                        </span>
+                        <span class="icon1"> <i class="fa-solid fa-circle-xmark"onclick="hideNotification('notification2')"></i>
+                    </span>     -->
+                </div>
+
+                <div class="notificationcard unread"id="notification3"onclick="toggleRandomAcceptance('notification3')" >
+                    <span class="icon"> <i class="fa-solid fa-user icon"></i></span>
+                    <span class="description">
+                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis, at!</p>
+                         <p id="notif-time">1m ago</p>
+                     </span>
+                        <!-- <span class="icon1"> <i class="fa-solid fa-circle-check"  onclick="toggleChecked(event)"></i>
+                         </span>
+                         <span class="icon1"> <i class="fa-solid fa-circle-xmark"onclick="hideNotification('notification3')"></i>
+                     </span>   -->
+                </div>
+
+                <div class="notificationcard unread"id="notification4"onclick="toggleRandomAcceptance('notification4')">
+                    <span class="icon"> <i class="fa-solid fa-user icon"></i></span>
+                   <span class="description">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis, at!</p>
+                        <p id="notif-time">1m ago</p>
+                    </span>
+                       <!-- <span class="icon1"> <i class="fa-solid fa-circle-check"  onclick="toggleChecked(event)"></i>
+                        </span>
+                        <span class="icon1"> <i class="fa-solid fa-circle-xmark"onclick="hideNotification('notification4')"></i>
+                    </span> -->
+                </div>
+
+                <div class="notificationcard unread" id="notification5"onclick="toggleRandomAcceptance('notification5')">
+                    <span class="icon"> <i class="fa-solid fa-user icon"></i></span>
+                   <span class="description">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis, at!</p>
+                        <p id="notif-time">1m ago</p>
+                    </span>
+                       <!-- <span class="icon1"> <i class="fa-solid fa-circle-check"  onclick="toggleChecked(event)"></i>
+                        </span>
+                        <span class="icon1"> <i class="fa-solid fa-circle-xmark"onclick="hideNotification('notification5')"></i>
+                    </span> -->
+                </div>
+
+                <div class="notificationcard unread" id="notification6" onclick="toggleRandomAcceptance('notification6')">
+                    <span class="icon"> <i class="fa-solid fa-user icon"></i></span>
+                   <span class="description">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis, at! </p>
+                        <p id="notif-time">1m ago</p>
+                    </span>
+                       <!-- <span class="icon1"> <i class="fa-solid fa-circle-check"  onclick="toggleChecked(event)"></i>
+                        </span>
+                        <span class="icon1"> <i class="fa-solid fa-circle-xmark"onclick="hideNotification('notification6')"></i>
+                    </span> -->
+                </div>
+
+                <div class="notificationcard unread"id="notification7"onclick="toggleRandomAcceptance('notification7')" >
+                    <span class="icon"> <i class="fa-solid fa-user icon"></i></span>
+                   <span class="description">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis, at!</p>
+                        <p id="notif-time">1m ago</p>
+                    </span>
+                       <!-- <span class="icon1"> <i class="fa-solid fa-circle-check" onclick="toggleChecked(event)"></i>
+                        </span>
+                        <span class="icon1"> <i class="fa-solid fa-circle-xmark"onclick="hideNotification('notification7')"></i>
+                    </span> -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="usernotification.js"></script>
+</body>
+</html>
