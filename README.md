@@ -33,7 +33,7 @@ The Food Waste Management System aims to [briefly describe the purpose and goals
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your/repository.git
+   git clone https://github.com/lovisha-khatri/Food_Waste_Management_project.git
    cd repository-name
    ```
 
